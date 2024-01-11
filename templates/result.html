@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader Result</title>
+</head>
+<body>
+    <h1>Video Downloader Result</h1>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
+        <p>Video Title: {{ video_metadata.title }}</p>
+        <p>Video Duration: {{ video_metadata.duration }}</p>
+        <p>Download Link: <a href="{{ download_info.url }}" target="_blank">Download</a></p>
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html>
